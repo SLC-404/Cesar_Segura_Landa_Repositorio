@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    </link>
+    <title>Proyecto Calculadora</title>
+
+
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <style>
+        #draggable {
+            width: 150px;
+            height: 150px;
+            padding: 0.5em;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#draggable").draggable(
+                {
+                    containment: "parent"
+                }
+            );
+            $("#draggable1").draggable(
+                { cursor: "move", cursorAt: { top: 56, left: 56 } });
+            $("#draggable2").draggable(
+                { cursor: "crosshair", cursorAt: { top: -5, left: -5 } });
+            $("#draggable3").draggable(
+                { cursorAt: { bottom: 0 } });
+            $( "#draggable4" ).draggable(
+                { revert: true });
+            $( "#draggable5" ).draggable(
+                { helper: "original" });
+        });
+    </script>
+
+
+
+</head>
+
+<body>
+    <div class="calculadora_g" id="draggable4">
+
+        <div class="output">
+            <input class="display" type="text" id="resultado" placeholder="0">
+        </div>
+        <button name="no_hago_nada">CE</button>
+        <button name="borrar_todo">C</button>
+        <button name="borar_dato">&lt;~</button>
+        <button name="dato_operador">/</button>
+        <button name="dato_numerico">7</button>
+        <button name="dato_numerico">8</button>
+        <button name="dato_numerico">9</button>
+        <button name="dato_operador">X</button>
+        <button name="dato_numerico">4</button>
+        <button name="dato_numerico">5</button>
+        <button name="dato_numerico">6</button>
+        <button name="dato_operador">-</button>
+        <button name="dato_numerico">1</button>
+        <button name="dato_numerico">2</button>
+        <button name="dato_numerico">3</button>
+        <button name="dato_operador">+</button>
+        <button name="dato_coma">,</button>
+        <button name="dato_numerico">0</button>
+        <button name="dato_punto">.</button>
+        <button name="dato_igual">=</button>
+
+
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
